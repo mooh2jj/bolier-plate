@@ -20,7 +20,8 @@ var url =
 // ).then(()=> console.log('MongoDB Connected...'))
 //     .catch(err => console.log(err))
 mongoose
-  .connect(config.mongoURI)
+  // .connect(config.MONGO_URI)
+  .connect(url)
   .then(() => console.log("MongoDB Connected..."))
   .catch((e) => console.log("MongoDB error: ", e));
 
@@ -31,7 +32,6 @@ app.get("/", (req, res) => {
 app.post("/register", (req, res) => {
   // 회원가입 할 때 필요한 정보들을 client에서 가져오면
   // 그것들을 DB에 넣는다.
-
   const user = new User(req.body);
 
   user.save((err, userInfo) => {
