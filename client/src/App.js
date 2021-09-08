@@ -1,9 +1,8 @@
-import logo from './logo.svg';
+
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import LandingPage from './components/views/LandingPage/LandingPage'
